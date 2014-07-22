@@ -161,6 +161,7 @@ public class StatsActivity extends WPActionBarActivity {
     protected void onPause() {
         super.onPause();
         mIsInFront = false;
+        mIsUpdatingStats = false;
         LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);
         lbm.unregisterReceiver(mReceiver);
         mPullToRefreshHelper.setRefreshing(false);
